@@ -1,0 +1,16 @@
+{
+  "name": "rap-quiz",
+  "version": "1.0.0",
+  "description": "The best rap quiz on the web",
+  "main": "index.js",
+  "scripts": {
+    "devServer":"live-server --browser=chromium"
+
+  },
+  "author": "davidOren",
+  "license": "ISC",
+  "dependencies": {
+    "devserver": "^0.2.5",
+    "live-server": "^1.2.1"
+  }
+}
