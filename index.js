@@ -38,7 +38,6 @@ qArr[14]= new Question('  ', [' ', ' ', ' ', ' '], ' ', './img/', './sound/');
 qArr[15]= new Question('  ', [' ', ' ', ' ', ' '], ' ', './img/', './sound/');
 */
 
-
 //Will play the given audio
 let audioPlay = (audio) => {
     let newAudio = new Audio(audio);
@@ -52,12 +51,13 @@ let imgDisplay = (img) => {
 
 //Keeping count of our score
 let scoreFunction = () => {
-    document.querySelector('.score').textContent = `Your Score: ${score}`
     score++;
+    document.querySelector('.score').textContent = `Your Score: ${score}`
 }
 
 //If the answer was correct:
 let correctAnswer = (number) => {
+    scoreFunction();
     audioPlay(qArr[number].a); //Play the audio
     imgDisplay(qArr[number].p); //Show the image
 
@@ -66,8 +66,6 @@ let correctAnswer = (number) => {
         generateNewQuestion(qArr, randomNumber()); //Generate a new random questions!
     }, 3000);
 }
-
-
 
 //Baiscally if the player won the game
 else { //The game is finished (qArr == usedArr)
@@ -151,8 +149,6 @@ let checkAnswer = (q, number) => { //Add events listeners
     document.getElementById('b').addEventListener('click', getIdHandler);
     document.getElementById('c').addEventListener('click', getIdHandler);
     document.getElementById('d').addEventListener('click', getIdHandler);
-
-
 }
 
 let valueGetter = (qArr, number) => { //A simple function to pass us the correct answer
@@ -176,7 +172,6 @@ wrongAnswer();
 //QUESTION GENERATOR
 let generateNewQuestion = (qArr, number) => { //Baically a controller for our new questions
     if (number !== undefined) {
-        scoreFunction();
         qRenderer(qArr, number);
         checkAnswer(qArr, number);
         show = correctCaller(number);
