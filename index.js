@@ -30,13 +30,6 @@ qArr[7] = new Question('Guess The Rapper By Lyrics: "Shake that body, party that
 qArr[8] = new Question('Mobb Deep are made up of two members - Prodigy and who?', ['Q-Tip', 'Big Noyd', 'Pete Rock', 'Havoc'], 'd', './img/mbdp.jpg', './sound/mbdp.mp3');
 qArr[9] = new Question('What is the name of Jay-Z\'s record label?', ['Bad Boy', 'RCA', 'Def Jam', 'Rockafella'], 'd', './img/jz.jpg', './sound/jz.mp3');
 qArr[10] = new Question('Who was the first hip hop artist to ever win a grammy?', ['DJ Jazzy Jeff & The Fresh Prince', 'Kendrick Lamar', 'Notorious B.I.G.', 'Lauren Hill'], 'a', './img/frp.jpg', './sound/frp.mp3');
-/*
-qArr[11] = new Question('', [' ', ' ', ' ', ' '], ' ', './img/', './sound/');
-qArr[12] = new Question('  ', [' ', ' ', ' ', ' '], ' ', './img/', './sound/');
-qArr[13] = new Question('  ', [' ', ' ', ' ', ' '], ' ', './img/', './sound/');
-qArr[14]= new Question('  ', [' ', ' ', ' ', ' '], ' ', './img/', './sound/');
-qArr[15]= new Question('  ', [' ', ' ', ' ', ' '], ' ', './img/', './sound/');
-*/
 
 //Will play the given audio
 let audioPlay = (audio) => {
@@ -181,12 +174,12 @@ let generateNewQuestion = (qArr, number) => { //Baically a controller for our ne
 }
 
 let scoreChecker = () => {
-    if (score-1 <= 5){
-        document.querySelector('.heading').innerHTML = `You scored: ${score-1} out of ${qArr.length}, You can't call yourself a hip-hop junkie.`;
-    }else if (score-1 >= 5 && score < 9){
-        document.querySelector('.heading').innerHTML = `You scored: ${score-1} out of ${qArr.length}, You know shit, but that's not enough.`;
+    if (score <= 5){
+        document.querySelector('.heading').innerHTML = `You scored: ${score} out of ${qArr.length}, You can't call yourself a hip-hop junkie.`;
+    }else if (score >= 5 && score < 9){
+        document.querySelector('.heading').innerHTML = `You scored: ${score} out of ${qArr.length}, You know shit, but that's not enough.`;
     }else if (score >= 9) {
-        document.querySelector('.heading').innerHTML = `You scored: ${score-1} out of ${qArr.length}, You are a real hip-hop junkie!`;
+        document.querySelector('.heading').innerHTML = `You scored: ${score} out of ${qArr.length}, You are a real hip-hop junkie!`;
 
     }
 }
