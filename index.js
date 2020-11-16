@@ -65,6 +65,7 @@ let scoreFunction = () => {
 
 //If the answer was correct:
 let correctAnswer = (number) => {
+    scrollTo(0,0);
     answersWrapper.style.visibility = 'hidden'
     scoreFunction();
     audioPlay(qArr[number].audio); //Play the audio
@@ -110,6 +111,7 @@ let randomNumber = () => {
 }
 
 let wrongAnswer = () => { //If the answer is wrong
+    scrollTo(0,0);
     mistakes++; //The player has made a mistake
     if (mistakes === 1) { //For the first mistake
         audioPlay('./sound/wrong.mp3');
@@ -160,7 +162,7 @@ let wrongAnswer = () => { //If the answer is wrong
 
 }
 
-let checkAnswer = (qArr, number) => { //Add events listeners
+let setButtons = (qArr, number) => { //Add events listeners
     usedNumbers.push(number); //Push the given number to the used numbers
     document.getElementById('a').addEventListener('click',getIdHandler);
     document.getElementById('b').addEventListener('click',getIdHandler);
@@ -181,7 +183,7 @@ let generateNewQuestion = (qArr, number) => { //Baically a controller for our ne
     if (number !== undefined) {
         currentNumber = number;
         qRenderer(qArr, number);
-        checkAnswer(qArr, number);
+        setButtons(qArr, number);
     }
 }
 
