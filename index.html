@@ -5,37 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/91fe4a2538.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>The Rap Quiz</title>
 </head>
 
 <body>
-
+    <div class="correctAnswerImage">
+    </div>
     <div class="container">
-            <div class="rapper-picture"></div>
-            <h1 class="heading" id="header">Hello!</h1>
-            <div class="mics">
-                <i class="fas fa-music wrong-1" id="wrong-1"></i>
-                <i class="fas fa-music wrong-2" id="wrong-2"></i>
-                <i class="fas fa-music wrong-3" id="wrong-3"></i>
+        <div class="rapper-picture"></div>
+        <h1 class="heading" id="header">Hello!</h1>
+        <div class="icons-wrapper">
+            <i class="fas fa-music wrong-1" id="wrong-1"></i>
+            <i class="fas fa-music wrong-2" id="wrong-2"></i>
+            <i class="fas fa-music wrong-3" id="wrong-3"></i>
         </div>
-
     </div>
-    <div class="score-flex">
+    <div class="score-buttons-wrapper">
+    <div class="score-wrapper">
         <h2 class="score">Your Score:</h2>
-        <button id="new-game"></button>
+        <button id="new-game">Play Again</button>
     </div>
 
-    <div class="flex-box">
-        <div class="ab-flex">
+    <div class="answers-wrapper">
+        <div class="ab-buttons">
             <button class="btn" onclick="'a'" id="a">a</button>
             <button class="btn" onclick="'b'" id="b">b</button>
         </div>
-        <div class="cd-flex">
+        <div class="cd-buttons">
             <button class="btn" onclick="'c'" id="c">c</button>
             <button class="btn" onclick="'d'" id="d">d</button>
         </div>
     </div>
+</div>
     <script src="index.js"></script>
 </body>
 
