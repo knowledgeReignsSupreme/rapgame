@@ -144,13 +144,15 @@ html {
 }
 
 @media screen and (max-width: 900px) {
+    html{
+        font-size: 65.5%;
+    }
     .icons-wrapper {
         margin-top: 2rem;
     }
 
     .container {
-        padding: 2rem;
-        
+        padding: 2rem;    
     }
 
     .answers-wrapper {
@@ -172,7 +174,11 @@ html {
     .btn {
         margin-top: 1rem;
     }
-
+    .btn:hover {
+        background-color: #ddd;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.6);
+    }
+    
     .heading-display-pic {
         transform: scale(0.90);
     }

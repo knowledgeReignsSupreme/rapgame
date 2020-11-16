@@ -53,7 +53,6 @@ let imgDisplay = (img) => {
     container.style.visibility = 'hidden';
     displayScore.style.visibility = 'hidden';
     correctAnswerImage.style.display = 'block';
-
     correctAnswerImage.innerHTML = `<img src="${img}" alt="" class="heading-display-pic"></img>`
 }
 
@@ -74,7 +73,7 @@ let correctAnswer = (number) => {
     setTimeout(() => {
     correctAnswerImage.style.display = 'none';
     container.style.visibility = 'visible';
-    displayScore.visibility = 'visible';
+    displayScore.style.visibility = 'visible';
     }, 3000)
 
     if (usedNumbers.length != qArr.length) { //validating if the game is finished
@@ -118,6 +117,7 @@ let wrongAnswer = () => { //If the answer is wrong
         heading.textContent = 'WRONG ANSWER'; //Header that says
         musicIcon1.classList.add('wrong-answer'); //This class will make the icon look bigger and red
         answersWrapper.style.visibility = 'hidden'; //Don't show the answer buttons
+        displayScore.stylevisibility = 'visible';
 
         setTimeout(function () {
             answersWrapper.style.visibility = 'visible'; //Show the buttons again
@@ -131,6 +131,7 @@ let wrongAnswer = () => { //If the answer is wrong
         heading.textContent = 'WRONG ANSWER'; //Header that says
         musicIcon2.classList.add('wrong-answer'); //This class will make the icon look bigger and red
         answersWrapper.style.visibility = 'hidden'; //Don't show the answer buttons
+        displayScore.stylevisibility = 'visible';
 
         setTimeout(function () {
             answersWrapper.style.visibility = 'visible'; //Show the buttons again
