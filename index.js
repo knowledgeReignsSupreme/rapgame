@@ -46,6 +46,9 @@ newGameButton.style.visibility = 'hidden'; //Hiding the START AGAIN button
 let audioPlay = (audio) => {
     let newAudio = new Audio(audio);
     newAudio.play();
+    setTimeout(() => {
+        newAudio.pause();
+    }, 3000)
 }
 
 //Will display the given image
